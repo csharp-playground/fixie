@@ -13,21 +13,22 @@ public class AaaBbbCccSpec {
 }
 ```
 
-## Test only if class contain `ABC` and ends with `Spec`
+## Test if class match value of key `fixie` in `AppSettings`.
 
 ```csharp
-public class CaseConvention : Convention {
-    public CaseConvention() {
+public class ConfigConvention: Convention {
+    public ConfigConvention() {
+        var target = ConfigurationManager.AppSettings.Get("fixie");
         Classes
-            .Where(x => MatchUpperCase(x.Name))
+            .Where(x => MatchUpperCase(x.Name, target))
             .NameEndsWith("Spec");
     }
 
-   private bool MatchUpperCase(string input) {
-        var upper = input.ToCharArray()
-            .Where(x => char.IsUpper(x))
-            .Select(x => x.ToString());
-        return string.Join("", upper).ToLower() == "abcs";
+    private bool MatchUpperCase(string input, string target) {
+        var upper = input.TrimEnd(new[] { 'S', 'p', 'e', 'c' })
+            .ToCharArray().Where(x => char.IsUpper(x)).Select(x => x.ToString());
+        var token = string.Join("", upper).ToLower();
+        return token == target;
     }
 }
 ```
