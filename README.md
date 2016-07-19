@@ -34,4 +34,4 @@ public class CaseConvention : Convention {
 
 ## Test
 
-> build.sh --target test
+> build.sh --test=abc

@@ -42,6 +42,7 @@
     <Compile Include="Spec\AaaBbbCccSpec.cs" />
     <Compile Include="Conventions\ConfigConvention.cs" />
     <Compile Include="Spec\XxxYyyZzzSpec.cs" />
+    <Compile Include="Spec\ConfigFileSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
