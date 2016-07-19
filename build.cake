@@ -20,7 +20,7 @@ Task("watch")
         var settings = new WatchSettings {
             Recursive = true,
             Path = "./",
-            Pattern = "*Tests.cs"
+            Pattern = "*.cs"
         };
         Watch(settings, (changed) => {
             RunTarget("test");
