@@ -2,12 +2,6 @@
 using System.Linq;
 
 namespace MyLibrary.Tests {
-	public class CustomConvention : Convention {
-		public CustomConvention() {
-			Classes.NameEndsWith("Spec");
-		}
-	}
-
 	public class CaseConvention : Convention {
 		public CaseConvention() {
 			Classes
@@ -16,9 +10,10 @@ namespace MyLibrary.Tests {
 		}
 
        private bool MatchUpperCase(string input) {
-			var upper = input.ToCharArray().Where(x => char.IsUpper(x)).Select(x => x.ToString());
-			return string.Join("", upper).ToLower() == "abc";
+			var upper = input.TrimEnd(new[] { 'S', 'p', 'e', 'c' })
+				.ToCharArray().Where(x => char.IsUpper(x)).Select(x => x.ToString());
+			var token = string.Join("", upper).ToLower();
+			return token == "abc";
 		}
 	}
 }
-

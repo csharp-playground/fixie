@@ -1,9 +1,8 @@
 ﻿using System;
 namespace MyLibrary.Tests {
-	public class HelloSpec {
+	public class HelloTest {
 		public void HelloWorld() {
-			Console.WriteLine("HelloSpec");
+			Console.WriteLine("HelloTest");
 		}
 	}
 }
-

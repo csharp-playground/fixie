@@ -31,17 +31,25 @@
     <Reference Include="Fixie">
       <HintPath>..\packages\Fixie.1.0.1\lib\net45\Fixie.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Spec\CustomConvention.cs" />
     <Compile Include="Spec\HelloSpec.cs" />
+    <Compile Include="Conventions\CustomConvention.cs" />
+    <Compile Include="Conventions\CaseConvention.cs" />
+    <Compile Include="Spec\HelloTest.cs" />
+    <Compile Include="Spec\AaaBbbCccSpec.cs" />
+    <Compile Include="Conventions\ConfigConvention.cs" />
+    <Compile Include="Spec\XxxYyyZzzSpec.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Spec\" />
+    <Folder Include="Conventions\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

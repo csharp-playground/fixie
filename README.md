@@ -27,7 +27,7 @@ public class CaseConvention : Convention {
         var upper = input.ToCharArray()
             .Where(x => char.IsUpper(x))
             .Select(x => x.ToString());
-        return string.Join("", upper).ToLower() == "abc";
+        return string.Join("", upper).ToLower() == "abcs";
     }
 }
 ```
