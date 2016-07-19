@@ -1,3 +1,7 @@
 ## Try Fixie
 
-> ./build.sh --target test
+- http://fixie.github.io
+
+## Test
+
+> build.sh --target test

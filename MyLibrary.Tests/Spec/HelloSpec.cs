@@ -11,5 +11,11 @@ namespace MyLibrary.Tests {
 			Console.WriteLine("HelloTest");
 		}
 	}
+
+	public class AaaBbbCccSpec {
+		public void HelloWorld() {
+			Console.WriteLine("ABC");
+		}
+	}
 }
 
