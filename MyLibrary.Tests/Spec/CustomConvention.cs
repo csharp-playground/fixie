@@ -8,8 +8,8 @@ namespace MyLibrary.Tests {
 		}
 	}
 
-	public class C2 : Convention {
-		public C2() {
+	public class CaseConvention : Convention {
+		public CaseConvention() {
 			Classes
 				.Where(x => MatchUpperCase(x.Name))
 				.NameEndsWith("Spec");
